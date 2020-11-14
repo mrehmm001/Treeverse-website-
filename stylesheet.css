@@ -1,0 +1,1530 @@
+/*Name: Muneeb Rehman*/
+
+/*The "*{}" object manipulates the style of everysingle element in HTML.
+
+Here I altered a few things I thought would be necessary. I made the padding and margin to 0px to remove the white gaps between the edges of the website.
+
+I also added a font family. I used 1 main font called ... and used 3 other fonts as fallback if the main font fails to load
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:'Fjalla One','Yanone Kaffeesatz','Oswald', sans-serif;
+}
+
+/*In the body element, I added a transition which would effect every other element inside the body, I prefer smooth animations.*/
+body{
+    transition: all 500ms linear;
+}
+
+
+/*I removed the margin and padding from ul as by default ul has some padding and margin around it*/
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*For the a tag, I decided to remove the text-decoration and changed the colour to black*/
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*For any a element tags with the class called "button". I designed a button look which I replicate from the designs*/
+.button{
+    text-decoration: none;
+    background-color: #E8E1E1;
+    padding: 13px 20px;
+    border-radius: 30px;
+}
+
+h1,h2,h3,h4{
+    color: black;
+}
+
+
+/*Line 47 to 79 is the styles for the section above the navbar, which I called it top-bar.*/
+.top-bar{
+    z-index: 1;/*Here I used z-index to change the z position of the top-bar on the website*/
+    display: flex;/*Display flex is used for aligning all the elements in the top-bar into one line, this also helps with the responsiveness of the website*/
+    width: 100%;
+    background-color: black;
+    height: 30px;
+    overflow: hidden;
+    font-size: 10px;
+}
+
+.top-bar a{
+    color: white;
+    margin: auto 10px;
+}
+
+
+a.highlighted{
+    background-color: #878A00;
+    padding: 100% 10px;
+    
+}
+.far, .fab{
+    font-size: 160%;
+}
+
+.top-bar .links{
+    margin: auto 10px;
+}
+
+.top-bar .links:nth-child(2){
+    margin-left: auto;
+}
+
+
+/*NAV BAR CSS*/
+
+/*Here, from line 84 to 127, I made the styles for the nav element, I replicated the design of it using the designs I made on Figma*/
+.responsive-nav{
+    background-color: transparent;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    transition: all 500ms linear;
+    
+    
+}
+.responsive-nav .responsive-nav-logo{
+    
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    position:absolute;
+    display: flex;
+    font-size: 30px;
+    z-index: 2;
+    transition: all 500ms linear;
+    overflow: hidden;
+}
+nav .nav-container{
+    display: flex;
+    margin: auto 100px;
+}
+nav .link{
+    display: block;
+}
+nav .nav-container:nth-child(2){
+    margin-left: auto;
+}
+nav a{
+    color:white;
+    margin: auto 10px;
+}
+
+nav .link-underline{
+    margin: 0px auto;
+    height: 2px;
+    transition: all 200ms linear;
+    width: 0%;
+    background-color: white;
+    
+    
+}
+
+#active a{
+    color: aqua;
+}
+#active .link-underline{
+    background-color: aqua;
+    
+}
+
+
+/*I also made a seperate nav bar called responsive nav which only shows if the screen width falls shrinks to a certain point. I used @media to make this show up*/
+.responsive-nav .hamburger{
+    padding: 5px;
+    cursor: pointer;
+    width: 40px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.responsive-nav .line{
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    
+    
+}
+.responsive-nav .responsive-logo{
+    width: 20%;
+    overflow: hidden;
+    margin: 0px 20px;
+}
+.responsive-nav .responsive-logo img{
+    width: 100%
+}
+
+/*Here line 148 to 156, I made the styles for the logo*/
+#logo a{
+    display: flex;
+}
+#logo a img{
+    transition: all 500ms linear;
+    margin: auto 0px;
+    height: 60px;
+}
+
+
+
+/*line 160 to 211, I made the styles for the cover of the website.*/
+header{
+    position: relative;
+    overflow: hidden;
+}
+
+header .cover{
+    z-index: 0;
+    height: 800px;
+    background-size:cover;
+    filter: brightness(0.7);/*I added a filter which controls the brightness of the image cover. I used it to dim it a bit to make the text infornt of it to make it easier to read*/
+    overflow: hidden;/*This prevents the image from showing outside of the div*/
+    
+    
+}
+.cover img{
+    position: absolute;/*I used position aboslute which takes the img of cover out of the document flow, this makes it no longer take up any space*/
+    object-fit: cover;
+    width: 100%;
+    height: 120%;
+    
+}
+
+/*Here, I made the styles for the cover title to be on top and center of the image cover. */
+.cover-title{
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    color: white;
+}
+
+
+
+header h2,header h4{
+    font-size: 4vw;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+
+header h2:nth-child(3){
+    margin-bottom: 1vw;
+}
+
+
+.cover-title .button{
+    border-radius: 40px;
+    font-size: 2vw;
+}
+
+
+
+/*SECTION 1 STYLES*/
+.section1{
+    color:black;
+    text-align: center;
+    margin: 40px 0px;
+}
+#underline{
+    background: black;
+    height: 3px;
+    margin: 40px 70px;
+}
+.section1 h4{
+    margin-bottom: 30px;
+}
+.section1 .button{
+    background-color: #8F6767;
+    color: white;
+}
+
+
+/*SECTION 2 STYLES*/
+.section2{
+    width: 100%;
+    height: 800px;
+    background: url(images/covers/image%207.png);
+    background-size: cover;
+    position: relative;
+}
+
+.section2-container{
+    text-align: center;
+    width: 50%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin: 10px;
+    z-index: 1;
+    
+}
+.section2-container .section2-header{
+    font-size: 70px;
+    font-weight: 600;
+   
+    
+}
+
+.section2-container .section2-info{
+    font-size: 40px;
+    margin: 0px 30px;
+    margin-bottom: 40px;
+   
+    
+}
+
+.section2-container .button{
+    background-color: #8F6767;
+    color: white;
+   
+    
+}
+
+
+
+
+/*SECTION 3 STYLES*/
+.section3{
+    background-color: lightgreen;
+    text-align-last: center;
+    padding: 50px;
+}
+
+
+.section3 .section3-container{
+    display:inline-flex;
+    position: relative;
+}
+.section3 img{
+    object-fit: cover;
+    width: 80px;
+    top: 10px;
+    transform: translate(-100%, -10%);
+    position: absolute;
+}
+
+
+.section3 .section3-container div{
+    margin: 30px 100px;
+}
+.section3 .count{
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.section3 p{
+    font-size: 20px;
+}
+.section-header{
+    font-size: 40px;
+    color: saddlebrown;
+    font-weight: 700;
+}
+.section3 .count img{
+    transform: translate(0%, 50%);
+}
+
+
+
+/*SECTION 4 STYLES*/
+.section4{
+    background-color: #B78D8D;
+    padding: 50px;
+    text-align: center;
+}
+
+.section4 .section-header{
+    color: white;
+}
+
+.section4 .news-container{
+    display: inline-flex;
+}
+
+.section4 .newsfeed{
+    width: 300px;
+    height: 500px;
+    margin:30px 40px;
+    background-color:dimgrey;
+    color: white;
+    position: relative;
+}
+
+.section4 .button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+    
+}
+
+.section4 .news-header{
+    font-size:20px;
+    color:lightskyblue;
+    margin: 20px 5px;
+}
+
+.section4 .news-info{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+
+.section4 img{
+    width: 100%;
+}
+
+.section4 .newssection-img{
+    height: 200px;
+    overflow: hidden;
+    
+}
+
+
+/*SECTION 5 STYLES*/
+.section5{
+    width: 100%;
+    height: 800px;
+    background: url(images/covers/image%2013.png);
+    background-size: cover;
+    position: relative;
+}
+
+.section5 .section2-container{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.section5 .section2-container .button{
+    background-color: #E8E1E1;
+    color: black;
+}
+
+
+
+
+
+
+
+
+/*SECTION 6 STYLES*/
+.section6{
+    background-color: #B78D8D;
+    text-align: center;
+}
+.section6 .section6-container{
+    display: inline-flex;
+}
+.select-info{
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    margin: 30px 40px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+.select-info img{
+    width: 100%;
+    filter: brightness(0.5);
+    transition: all 500ms linear;
+}
+
+.select-info-container .select-header{
+    font-size: 30px;
+}
+
+.select-header .underline{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.select-info-container .select-inf{
+    margin-bottom: 30px;
+    font-size: 15px;
+    
+}
+
+
+
+.select-info-container{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+/*SECTION 7 STYLES*/
+.section7{
+    height: 600px;
+    background-image: url(images/covers/image%2017.png);
+    background-size: cover;
+    filter: brightness(0.7);
+}
+
+.section7 .info-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(183,141,141,0.5);
+    width: 500px;
+    height: 100px;
+    padding: 50px;
+    text-align: center;
+}
+
+.section7 .info-box .section-header{
+    color: white;
+    margin-bottom: 30px;
+    
+}
+
+.section8{
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 20px;
+}
+.section8 .section8-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+    
+}
+.live-feed-container{
+    padding: 0px 50px;
+    margin: 30px auto;
+}
+.section8 .section8-container img{
+    height: 200px;
+    
+    
+}
+/*FOOTER STYLES*/
+
+footer{
+    background-color: black;
+    color: white;
+    display:flex;
+    position: relative;
+    padding: 20px 70px 0px 70px;
+    
+}
+.footer-headers{
+    color: aqua;
+    padding-bottom: 40px;
+    margin-bottom:
+}
+.footer-headers p{
+    color: white;
+    width:240px;
+}
+.footer-sections .apply-for-news{
+    color:aqua;
+    font-size: 10px;
+    position: absolute;
+    top: 90px;
+    display: grid;
+    
+}
+.footer-sections .email-input{
+    margin: 10px 0px;
+    border-radius: 30px;
+}
+.footer-sections .button{
+    color: white;
+    background-color: red;
+    text-align: center;
+    width: 0px;
+    padding: 5px;
+    width: 70px;
+    font-size: 10px;
+}
+
+.footer-sections{
+    flex: 1;
+    
+}
+footer i{
+    width: 30px;
+    margin: 5px 0px;
+    font-size: 20px;
+}
+
+.footer-headers a{
+    color: gray;
+    
+}
+.footer-headers ul p{
+    margin-bottom: 15px;
+}
+
+.footer-headers ul{
+    margin: 15px 0px;
+}
+
+.footer-bottom-section{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 102px;
+    
+}
+.copyright{
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,140%);
+    position: absolute;
+    width: 100%;
+}
+.footer-underline{
+    background-color: white;
+    height: 5px;
+    margin: 0px 60px;
+}
+
+.social-media{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.social-media a{
+    text-decoration: none;
+    color: gray;
+}
+
+
+
+/*ABOUT US STYLES*/
+
+.about-us-section1{
+    background-color: #442B2B;
+    text-align: center;
+    color: white;
+}
+.about-us-section1 .icon-box-section{
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.about-us-section1 .icon-img img{
+    width: 100%;
+}
+
+.about-us-section1 h2{
+    padding: 10px 0px;
+    color: white;
+    font-size: 40px;
+}
+.about-us-section1 .icon-box-section{
+    display: inline-flex;
+}
+.about-us-section1 .page-section{
+    width: 300px;    
+    height: 300px;
+    margin: 20px 90px;
+    background-color: black;
+    border-radius: 100%;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+    transition: all 500ms linear;
+    cursor: pointer;
+}
+.about-us-section1 img{
+    transition: all 500ms linear;
+    width: 100%;
+    filter: brightness(0.5)
+    
+}
+
+.page-section .page-section-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+/*SECTION2 STYLES*/
+.about-us-section2{
+    display: flex;
+
+}
+.about-us-section2 .content-info{
+    flex: 1.2;
+    margin: auto 30px;
+}
+.about-us-section2 .content-info p{
+    font-size: 25px;
+}
+.about-us-section2 .content-img{   
+    flex: 1;
+    height: 500px;
+    background-image: url(images/About-us-images/image%2028.png);
+    background-size: cover;
+}
+
+
+
+/*SECTION3 STYLES*/
+.about-us-section3{
+    width: 100%;
+    height: 800px;
+    background: url(images/About-us-images/image%2029.png);
+    background-size: cover;
+    filter: brightness(0.7);
+    position: relative;
+}
+.about-us-section3 .section-header{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 70px;
+ 
+}
+
+
+.about-us-section4{
+    display: flex;
+}
+.about-us-section4 img{
+    width: 650px;
+}
+.about-us-section4 .content-info:nth-child(2){
+    margin: 80px 30px;
+    font-size: 25px
+    
+}
+.about-us-section4 .content-info:nth-child(1){
+   margin: 80px 30px;
+    text-align: center;
+}
+
+
+.about-us-section5{
+    display: flex;
+    background: #f5d09d;
+}
+.about-us-section5 .content-info{
+    flex: 1.4;
+    margin: auto 30px;
+    font-size: 25px;
+
+}
+
+.about-us-section5 .content-img{
+    flex: 1;
+    background-image: url(images/About-us-images/image%2031.png);
+    height:500px;
+    background-size: cover;
+}
+
+
+
+.about-us-section6{
+    width: 100%;
+    height: 800px;
+    background: url(images/About-us-images/image%2032.png);
+    background-size: cover;
+    filter: brightness(0.7);
+    position: relative;
+}
+.about-us-section6 .section-header{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 70px;
+ 
+}
+
+
+
+
+
+
+
+/*NEWS SECTION STYLES*/
+.news-section-1{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-box{
+    transition: all 200ms linear;
+    margin:20px 90px;
+    justify-content: center;
+    
+    
+}
+
+.icon-box:hover{
+    transition: all 200ms linear;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.icon-img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.icon-img img{
+    
+    width: 200%;
+}
+.icon-title{
+    text-align: center;
+    font-size: 170%;
+    width: 200px;
+    
+}
+
+.news-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px
+
+    
+}
+.container{
+    max-width: 1400px;
+    margin: 0px auto;
+}
+.news-details{
+    margin: auto 20px;
+    width: 900px;
+}
+.news-img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 100%;
+  
+}
+.news-img img{
+    
+    width: 100%;
+}
+#img2 img{
+    
+    width: 200%;
+}
+
+
+
+.news-title{
+    color: blue;
+}
+.header{
+    margin: 80px 0px;
+}
+
+.header .header-title{
+    text-align: center;
+    font-size: 50px;
+}
+.header .underline{
+    background-color: black;
+    height: 5px;
+    margin: 0px auto;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/*Volunteer STYLES*/
+
+.volunteer-section-1{
+    text-align: center;
+    
+}
+
+.volunteer-section-1 .icon-box-section{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+}
+.volunteer-section-1 .icon-img img{
+    width: 100%;
+}
+.section-header:nth-child(3){
+    font-size: 30px;
+    margin: 10px;
+    color: black;
+    text-align: center;
+}
+.volunteer-section-2{
+    height: 900px;
+    background-image: url(images/volunteer/covers/green-pine-trees-1179229.jpg);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.volunteer-section-2 .section-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    height: 630px;
+    width: 1200px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 70px;
+    
+}
+
+.section-box .section-header{
+    text-align: center;
+    color: white;
+    margin: 30px 0px;
+    font-size: 70px;
+}
+.section-box .section-container {
+    margin: 0px 60px;
+}
+
+.section-box .section-container .buttons input{
+    height: 120px;
+    border-radius: 20px;
+    margin: auto 0px;
+    flex: 1.95;
+    font-size: 30px;
+    padding: 0px 30px;
+}
+.section-box .section-container .buttons{
+    display: flex;
+    
+}
+@media screen and (max-width: 1250px){
+    .volunteer-section-2 .section-box{   
+        height: 630px;
+        width: 120%;
+    
+    }
+    @media screen and (max-width:500px){
+        .section-box .section-container .buttons{
+            display: flex;
+            flex-direction: column;
+        }
+        .section-box #next {
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        
+    }
+
+    
+}
+.section-box .section-container .buttons:nth-child(1) button:nth-child(1){
+  background-color: #31305C;
+}
+
+.section-box .section-container .buttons:nth-child(1) button:nth-child(1):hover{
+  background-color: #26254A;
+}
+
+
+.section-box .section-container .buttons button{
+    flex: 1;
+    border: 0px;
+    width: 300px;
+    height: 150px;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: darkgray;
+    color: white;
+    cursor: pointer;
+}
+.section-box .section-container .buttons button:hover{
+  background-color: grey;
+}
+
+.section-box #next{
+    border: 0px;
+    background-color: red;
+    width: 200px;
+    height: 90px;
+    float: right;
+    border-radius: 20px;
+    font-size: 30px;
+    color: darkred;
+    cursor: pointer;
+
+}
+
+.section-box #next:hover{
+    background-color: darkred;
+    color: red;
+
+}
+.volunteer-section-3{
+    text-align: center;
+    margin: 20px 0px;
+    display: block;
+}
+
+.volunteer-section-3 .icon-img {
+    margin: 15px 0px;
+}
+.volunteer-section-3 .icon-img img{
+    width: 100%;
+    
+}
+
+.volunteer-section-3 .volunteer-section-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.volunteer-section-3 .volunteer-section-container .section-info{
+    text-align: left;
+    width: 450px;
+    margin: auto 30px;
+    font-size: 20px;
+    
+}
+
+.volunteer-section-3 .volunteer-section-container .section-info .paragraph{
+    margin: 30px 0px;
+    
+}
+
+.section-inputs {
+    text-align: left;
+}
+
+.section-inputs .input-info{
+    margin:20px 0px;
+}
+
+.section-inputs .input-info input{
+    width: 300px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: lightgray;
+    padding: 0px 10px;
+    height: 30px
+}
+
+.section-inputs #submit{
+    border: 0px;
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+.volunteer-section-4{
+    display: block;
+    height: 600px;
+    background-image: url(images/volunteer/covers/image%2059.png);
+    background-size: cover;
+
+
+}
+
+.filter{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+}
+.filter .section-header{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px black;
+    position: absolute;
+}
+.volunteer-section-4 .section-header{
+    z-index: 1;
+    color: white;
+}
+
+
+.volunteer-section-5{
+    display: flex;
+    height: 800px;
+}
+
+.volunteer-section-5 .info-box{
+    margin: 50px;
+    flex: 1;
+    font-size: 30px;
+    margin: auto 30px;
+}
+.volunteer-section-5 .info-box .info{
+    margin: 20px 0px;
+}
+
+
+.volunteer-section-5 .img-box{
+    flex: 1;
+    background-image: url(images/volunteer/icon-img/image%2062.png);
+    background-size: cover;
+}
+
+/*CONTACT US STYLES*/
+
+.contact-us-section{
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+.contact-us-section .contact-us-email-section{
+    display: flex;
+    flex-direction:column;
+
+    
+}
+
+.contact-us-section .contact-us-email-section{
+    margin: 10px;
+
+
+    
+}
+
+.contact-us-section .contact-us-email-section input{
+    margin: 4px 0px;
+    height: 30px;
+    width: 500px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: #C4C4C4;
+
+
+    
+}
+.contact-us-section .contact-us-email-section input:nth-child(4){
+    height: 200px;
+ 
+
+    
+}
+
+.contact-us-section .contact-us-email-section button{
+    width: 80px;
+    height: 30px;
+    border: 0px;
+    background-color: orangered;
+    color: white;
+ 
+
+    
+}
+
+.contact-us-section .contact-us-info-container{
+    width: 500px;
+    transform: translate(0%,4%);
+    font-size: 150%;
+}
+.contact-us-info-container .section-header{
+    font-size: 40px;
+    color: darkgreen;
+}
+.contact-us-section h2 {
+
+    font-size: 20px;
+}
+
+.contact-us-section .contact-us-info-container p:nth-child(1){
+    margin-top: 20px;
+ 
+}
+
+
+.report-container1{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.report-container1 img{
+    width: 140%;
+    height: 100%;
+    object-fit: cover;
+}
+.report-container2 .section-header,.report-container3 .section-header,.report-container4 .section-header,.report-container5 .section-header,.report-container6 .section-header,.report-container7 .section-header,.report-container8 .section-header{
+    text-align: center;
+    margin: 10px;
+    
+}
+.report-container2 .section-info,.report-container3 .section-info,.report-container4 .section-info,.report-container5 .section-info,.report-container6 .section-info,.report-container7 .section-info{
+    width: 800px;
+    margin: 30px auto;
+    
+}
+
+.report-container8 .designs .wireframes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0px;
+    
+    
+    
+}
+.report-container8 .designs .finalDesign{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+    
+}
+.report-container8 .page{
+    overflow: hidden;
+    height: 100%;
+    width: 200px;
+    margin: 10px;
+    
+}
+.report-container8 .page img{
+    height: 100%;
+    width: 100%;
+    
+}
+.report-container8 h2{
+    text-align: center;
+    margin-top: 70px;
+    
+}
+.htmlValidationResults{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.htmlValidationResults .page{
+    overflow: hidden;
+    height: 100%;
+    width: 500px;
+    margin: 10px;
+}
+.name{
+    font-size: 30px;
+}
+.page h5{
+    text-align: center;
+}
+
+.sitemap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sitemap .page{
+    width: 500px;
+    
+    
+}
+
+
+/*RESPONSIVE CSS*/
+
+/*This whole thing is what I used to achieve the mobile look for the website*/
+
+@media screen and (max-width:1560px){
+    .report-container2 .section-info,.report-container3 .section-info,.report-container4 .section-info,.report-container5 .section-info,.report-container6 .section-info,.report-container7 .section-info{
+        width: 70%;
+        margin: 5% auto;
+    }
+    
+    .section4 .newsfeed{
+        margin: 20px 10px;
+    }
+    .section7 .info-box .section-header{
+        font-size: 200%;
+    }
+    
+    
+    .section4 .news-container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+        
+    .section6 .section6-container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .section3{
+        padding: 30px 0px;
+    }
+    
+    .section3 .section3-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        width:100%
+       
+    }
+=
+    .section3 .section3-container div:nth-child(2){
+        margin-bottom: 0px;
+      
+    }
+      
+    .section3 img{
+        object-fit: cover;
+        width: 80px;
+        top: 0px;
+        transform: translate(-0%, 30%);
+        position:relative;
+    }
+        
+        .section7 .info-box{
+            width: 240px;
+        }
+    @media screen and (max-width:966px){
+        
+        nav{
+            height: 310px;
+            left: 100%;
+            transform: translate(0%, 13%);
+            display:none;
+
+            
+        }
+        
+        nav a{
+            display: block;
+            margin: 20px 0px;
+            font-size: 15px;
+            
+        }
+        nav .nav-container{
+            margin: 0px;
+            text-align: center;
+            display: block;
+        }
+        
+        #logo{
+            display: none;
+        }
+       
+        .responsive-nav{
+            display: inline-flex;
+        }
+        
+        .section2 .section2-container{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            
+        }
+        
+        .section2 .section2-header{
+            font-size: 9vw
+            
+        }
+        
+        .section2 .section2-info{
+            font-size: 4vw;
+            margin: 20px;
+        }
+        
+        .section2 .button{
+            font-size: 2vw;
+        }
+      
+        
+        
+        .section5 .section2-container{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            
+        }
+        
+        .section5 .section2-header{
+            font-size: 9vw
+            
+        }
+        
+        .section5 .section2-info{
+            font-size: 4vw;
+            margin: 20px;
+        }
+        
+        .section5 .button{
+            font-size: 2vw;
+        }
+        
+        
+        
+        
+        .cover-title{
+            font-size:50px;
+        }
+        .cover-title .button{
+            font-size: 20px;
+        }
+        
+        header h2,header h4{
+            width: 300px;
+            font-size: 50px;;
+            color: white;
+            text-shadow: 2px 2px black;
+        }
+        
+        header h2:nth-child(3){
+            margin-bottom: 30px;
+        }
+        footer{
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .footer-sections .apply-for-news{
+            color:aqua;
+            font-size: 10px;
+            position: static;
+            top: 0px;
+            display: grid;
+            margin-bottom: 20px;
+    
+        }
+        .footer-headers p{
+            margin: auto;
+        }
+        .apply-for-news .email-input{
+            margin: 10px 0px;
+        }
+         .apply-for-news .button{
+            margin: 0px;
+        }
+        .footer-headers p{
+            width: 200px;
+        }
+        
+        .volunteer-section-5{
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        .about-us-section2{
+            flex-direction:column-reverse;
+        }
+        .about-us-section2 .content-info{
+            margin: 30px 30px;
+        }
+        .about-us-section2 .content-img {
+            flex: none;
+        }
+        .about-us-section4{
+            flex-direction: column;
+        }
+        .about-us-section4 img{
+            width: 100%;
+            text-align: center;
+        }
+        .about-us-section4 .content-info:nth-child(1) {
+            margin: 10px;
+            
+        }
+        .about-us-section4 .content-info:nth-child(2) {
+            margin: 20px;
+            
+        }
+        
+        .about-us-section5{
+            flex-direction: column;
+        }
+        .about-us-section5 .content-img {
+            flex: none;
+        }
+        
+    
+
+    
+    }
+    @media screen and (max-width:610px){
+        .top-bar .links2{
+           display: none;
+        }
+        
+    }
+    @media screen and (max-width:566px){
+        .contact-us-email-section{
+            width: 100%;
+        }
+        .contact-us-section .contact-us-email-section input {
+            width: 100%;
+        }
+        .contact-us-info-container{
+            text-align: center;
+            
+        }
+        .contact-us-info-container div{
+            margin: 20px 0px;
+        }
+        .contact-us-info-container .section-header, .contact-us-info-container .contact-us-info, .contact-us-info-container .email, .contact-us-info-container.phone-number,.contact-us-info-container .section-header{
+            font-size: 70%;
+        }
+        
+    }
+    
+ 
+    
+};
+
+
+
+
